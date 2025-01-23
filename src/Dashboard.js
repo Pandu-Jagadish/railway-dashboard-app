@@ -86,7 +86,7 @@ const Dashboard = () => {
 
     const fetchTrainData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/trains");
+        const response = await axios.get("http://localhost:5001/api/trains");
         setTrains(response.data);
       } catch (error) {
         console.error("Failed to fetch train data:", error);
@@ -95,7 +95,7 @@ const Dashboard = () => {
 
     const intervalId = setInterval(() => {
       fetchTrainData();
-    }, 5000); // Fetch data every 5 seconds
+    }, 5001); // Fetch data every 5 seconds
 
     fetchTrainData(); // Initial fetch
 
